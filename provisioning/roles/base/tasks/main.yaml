@@ -1,0 +1,11 @@
+- name: Make sure base packages are installed
+  become: True
+  package: name={{item}} state=installed
+  with_items:
+       - git
+       - vim
+       - tmux
+       - python
+       - sudo
+       - python-pip
+       - python-dev

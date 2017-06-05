@@ -1,0 +1,22 @@
+- name: Make sure ansible is installed
+  become: True
+  pip:
+    name: ansible
+- name: Make sure the sudo-nopassword group exists
+  become: True
+  group:
+    name: sudo-nopassword
+    state: present
+- name: Make sure the sudo-nopassword group can use sudo, without a password
+  become: True
+  lineinfile:
+    path: /etc/sudoers
+    line: "%sudo-nopassword ALL=(ALL) NOPASSWD: ALL"
+- name: Create the ansible-pull user.
+  become: True
+  user:
+    name: ansible-pull
+    shell: /bin/bash
+    groups: sudo-nopassword
+    append: True
+    system: True
