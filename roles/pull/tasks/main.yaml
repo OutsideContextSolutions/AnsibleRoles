@@ -26,4 +26,4 @@
     user: ansible-pull
     name: "ansible-pull"
     minute: "{{59 |random}}" #So that servers run updates at different times.
-    job: "ansible-pull -U {{configRepoUrl}} -d ~/ansible-pull > ~/ansible-log"
+    job: "/usr/local/bin/ansible-pull -U {{configRepoUrl}} -d ~/ansible-pull > ~/ansible-log"
