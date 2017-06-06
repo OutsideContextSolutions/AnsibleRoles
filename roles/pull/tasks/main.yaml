@@ -1,7 +1,7 @@
 - name: Make sure ansible is installed
   become: True
   pip:
-    name: ansible
+    name: ansible, markupsafe
 - name: Make sure the sudo-nopassword group exists
   become: True
   group:
@@ -21,9 +21,9 @@
     append: True
     system: True
 - name: Add ansible-pull to crontab
+  become: True
   cron:
     user: ansible-pull
     name: "ansible-pull"
-    minute: "0"
-    hour: "*"
-    job: "ansible-pull {{configRepoUrl}} > ~/ansible-log"
+    minute: "{{59 |random}}" #So that servers run updates at different times.
+    job: "ansible-pull -U {{configRepoUrl}} -d ~/ansible-pull > ~/ansible-log"
