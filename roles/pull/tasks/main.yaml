@@ -20,3 +20,10 @@
     groups: sudo-nopassword
     append: True
     system: True
+- name: Add ansible-pull to crontab
+  cron:
+    user: ansible-pull
+    name: "ansible-pull"
+    minute: "0"
+    hour: "*"
+    job: "ansible-pull {{configRepoUrl}} > ~/ansible-log"
