@@ -1,7 +1,0 @@
----
-- hosts: all
-  vars:
-    configRepoUrl: https://github.com/OutsideContextSolutions/ServerConfig.git
-  roles:
-   - base
-   - pull
