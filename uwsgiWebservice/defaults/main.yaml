@@ -5,6 +5,9 @@ requirements: "requirements.txt"
 
 templates: []
 
+ssl_certificate: /etc/letsencrypt/live/{{baseDomain}}/fullchain.pem;
+ssl_certificate_key: /etc/letsencrypt/live/{{baseDomain}}/privkey.pem;
+
 ###Postgres DB
 dbName: "{{ domain | replace('.','_') }}"
 dbUser: "{{ domain | replace('.','_') }}"

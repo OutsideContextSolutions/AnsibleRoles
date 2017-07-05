@@ -1,0 +1,2 @@
+- name: Create self-signed SSL cert
+  command: openssl req -x509 -newkey rsa:4096 -keyout {{ssl_certificate_key}} -out {{ssl_certificate}} -subj '/CN=localhost' -nodes
