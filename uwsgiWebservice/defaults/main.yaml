@@ -35,4 +35,5 @@ module: "{{appname}}.wsgi"
 lazy_apps: "true"
 
 ###
+django: False
 djanngo_management_command: manage.py

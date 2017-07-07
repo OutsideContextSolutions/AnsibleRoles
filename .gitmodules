@@ -1,3 +1,6 @@
 [submodule "letsencrypt"]
 	path = letsencrypt
 	url = https://github.com/OutsideContextSolutions/ansible-letsencrypt.git
+[submodule "ldap"]
+	path = ldap
+	url = https://github.com/OutsideContextSolutions/ansible-openldap.git
