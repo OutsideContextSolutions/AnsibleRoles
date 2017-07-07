@@ -1,0 +1,9 @@
+- name: Create a virtualenv at ~/{{domain}}-venv/ and install repository requirements.txt
+  become: True
+  become_user: "{{user}}"
+  pip:
+    extra_args: --no-cache-dir
+    requirements: ~/{{domain}}/{{requirements}}
+    virtualenv: ~/{{domain}}-venv/
+    virtualenv_command: "{{virtualenv_command}}"
+
