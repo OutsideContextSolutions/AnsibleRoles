@@ -19,6 +19,7 @@
 - name: Pull the repo at {{repo}}
   become: True
   become_user: "{{user}}"
+  when: repo is string
   git:
     depth: 1
     repo: '{{repo}}'

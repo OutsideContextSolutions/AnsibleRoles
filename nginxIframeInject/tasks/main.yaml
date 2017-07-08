@@ -6,7 +6,7 @@
     block: |
 location / {
     sub_filter </body>
-        '</body><iframe src="{{url}}"></iframe>';
+        '</body><iframe class="injected menu" src="{{url}}"></iframe>';
     sub_filter_once on;
 }
   with_items: "{{ configuration_files }}"

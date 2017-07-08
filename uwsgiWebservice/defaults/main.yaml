@@ -1,3 +1,4 @@
+repo: False
 branch: master #Git version
 virtualenv_command: virtualenv
 appname: Settings
@@ -37,6 +38,7 @@ lazy_apps: "true"
 dbType: postgres
 
 ###
+requirements: False
 python: False
 django: False
 djanngo_management_command: manage.py
