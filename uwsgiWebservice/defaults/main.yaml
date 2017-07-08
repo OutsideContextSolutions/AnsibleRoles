@@ -34,6 +34,9 @@ module: "{{appname}}.wsgi"
 # Don't load the app in the Master - saves memory in quiet times
 lazy_apps: "true"
 
+dbType: postgres
+
 ###
+python: False
 django: False
 djanngo_management_command: manage.py

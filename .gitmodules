@@ -4,3 +4,6 @@
 [submodule "ldap"]
 	path = ldap
 	url = https://github.com/OutsideContextSolutions/ansible-openldap.git
+[submodule "postgres"]
+	path = postgres
+	url = https://github.com/ANXS/postgresql.git
