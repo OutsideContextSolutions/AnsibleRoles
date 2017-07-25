@@ -19,6 +19,7 @@
 - name: Pull the repo at {{repo}}
   become: True
   become_user: "{{user}}"
+  when: repo is string
   git:
     depth: 1
     repo: '{{repo}}'
@@ -33,7 +34,9 @@
   shell: < /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-32};echo -n;
   register: dbPasswordCommand
 
+
 - name: create {{dbName}} postgres database
+  when: dbType == 'postgres'
   become: True
   become_user: "postgres"
   postgresql_db:
@@ -41,6 +44,7 @@
 
 - name: give access to {{dbUser}} on {{dbName}}
   become: True
+  when: dbType == 'postgres'
   become_user: "postgres"
   postgresql_user:
     db: "{{dbName}}"
@@ -91,7 +95,7 @@
     state: link
 
 - name: Configure python
-  when: python OR django
+  when: python or django
   include: python.yaml
 - name: Configure django
   when: django

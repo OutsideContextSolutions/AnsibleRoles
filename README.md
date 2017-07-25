@@ -1,4 +1,4 @@
-Examples
+This mostly tries to use common variable names throughout.
 
 ```yaml
 ---

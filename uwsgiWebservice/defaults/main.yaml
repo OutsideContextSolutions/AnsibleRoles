@@ -1,3 +1,4 @@
+repo: False
 branch: master #Git version
 virtualenv_command: virtualenv
 appname: Settings
@@ -34,5 +35,10 @@ module: "{{appname}}.wsgi"
 # Don't load the app in the Master - saves memory in quiet times
 lazy_apps: "true"
 
+dbType: postgres
+
 ###
+requirements: False
+python: False
+django: False
 djanngo_management_command: manage.py
