@@ -1,0 +1,5 @@
+directory: "/etc/unbound"
+username: unbound
+verbosity: 0
+statistics-interval: 0
+zones: []
