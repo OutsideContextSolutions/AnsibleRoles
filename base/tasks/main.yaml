@@ -11,6 +11,8 @@
        - python-dev
        - python-virtualenv
        - python3-virtualenv
+       - python-psycopg2
        - nginx
        - uwsgi
        - uwsgi-plugin-php
+       - postgresql

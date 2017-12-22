@@ -2,8 +2,8 @@ repo: False
 branch: master #Git version
 virtualenv_command: virtualenv
 appname: Settings
-requirements: "requirements.txt"
-
+#requirements: "requirements.txt"
+requirements: False
 templates: []
 
 ssl_certificate: /etc/letsencrypt/live/{{baseDomain}}/fullchain.pem;
@@ -38,7 +38,6 @@ lazy_apps: "true"
 dbType: postgres
 
 ###
-requirements: False
 python: False
 django: False
 djanngo_management_command: manage.py
