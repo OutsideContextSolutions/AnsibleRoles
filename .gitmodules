@@ -7,3 +7,6 @@
 [submodule "postgres"]
 	path = postgres
 	url = https://github.com/ANXS/postgresql.git
+[submodule "ansible-mailserver"]
+	path = ansible-mailserver
+	url = https://github.com/OutsideContextSolutions/ansible-mailserver.git
